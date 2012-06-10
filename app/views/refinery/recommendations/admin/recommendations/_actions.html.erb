@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Recommendations::Admin::RecommendationsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.recommendations_admin_recommendations_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_recommendations_admin_recommendation_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Recommendations::Admin::RecommendationsController.sortable? && ::Refinery::Recommendations::Recommendation.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Recommendations"),
+                 refinery.recommendations_admin_recommendations_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Recommendations"),
+                 refinery.recommendations_admin_recommendations_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

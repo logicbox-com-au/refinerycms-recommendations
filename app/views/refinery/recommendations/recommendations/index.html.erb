@@ -1,0 +1,11 @@
+<% content_for :body_content_left do %>
+  <ul id="recommendations">
+    <% @recommendations.each do |recommendation| %>
+      <li>
+        <%= link_to recommendation.name, refinery.recommendations_recommendation_path(recommendation) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

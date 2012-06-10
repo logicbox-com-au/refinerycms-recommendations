@@ -1,0 +1,81 @@
+<% content_for :body_content_title do %>
+  <%= @recommendation.name %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @recommendation.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Role</h1>
+    <p>
+      <%=raw @recommendation.role %>
+    </p>
+  </section>
+  <section>
+    <h1>Company</h1>
+    <p>
+      <%=raw @recommendation.company %>
+    </p>
+  </section>
+  <section>
+    <h1>Company Url</h1>
+    <p>
+      <%=raw @recommendation.company_url %>
+    </p>
+  </section>
+  <section>
+    <h1>Source Url</h1>
+    <p>
+      <%=raw @recommendation.source_url %>
+    </p>
+  </section>
+  <section>
+    <h1>Publish Date</h1>
+    <p>
+      <%=raw @recommendation.publish_date %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @recommendation.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Youtube</h1>
+    <p>
+      <%=raw @recommendation.youtube_id %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%= image_fu @recommendation.photo, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Widget Visible</h1>
+    <p>
+      <%=raw @recommendation.widget_visible %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="recommendations">
+      <% @recommendations.each do |recommendation| %>
+        <li>
+          <%= link_to recommendation.name, refinery.recommendations_recommendation_path(recommendation) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

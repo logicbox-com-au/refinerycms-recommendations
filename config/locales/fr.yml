@@ -1,0 +1,36 @@
+fr:
+  refinery:
+    plugins:
+      recommendations:
+        title: Recommendations
+    recommendations:
+      admin:
+        recommendations:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Recommendation
+            reorder: Réordonner les Recommendations
+            reorder_done: Fin de réordonnancement des Recommendations
+          records:
+            title: Recommendations
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Recommendation. Cliquer sur "Créer un(e) nouve(au/l/lle) Recommendation" pour créer votre premi(er/ère) recommendation.'
+          recommendation:
+            view_live_html: Voir ce(t/tte) recommendation <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) recommendation
+            delete: Supprimer définitivement ce(t/tte) recommendation
+      recommendations:
+        show:
+          other: Autres Recommendations
+  activerecord:
+    attributes:
+      'refinery/recommendations/recommendation':
+        name: Name
+        company: Company
+        company_url: Company Url
+        source_url: Source Url
+        publish_date: Publish Date
+        role: Role
+        description: Description
+        youtube_id: Youtube
+        photo: Photo
+        widget_visible: Widget Visible

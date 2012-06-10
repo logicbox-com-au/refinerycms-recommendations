@@ -1,0 +1,96 @@
+<%= form_for [refinery, :recommendations_admin, @recommendation] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @recommendation,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :role -%>
+    <%= f.text_field :role  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :company -%>
+    <%= f.text_field :company  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :company_url -%>
+    <%= f.text_field :company_url  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :source_url -%>
+    <%= f.text_field :source_url  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :publish_date -%>
+    <%= f.datetime_select :publish_date  -%>
+
+  </div>
+  
+  <div class='field'>
+    <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
+      <ul id='page_parts'>
+        <% [:description].each_with_index do |part, part_index| %>
+          <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
+            <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/recommendations/recommendation", :default => part.to_s.titleize), "##{part}" %>
+          </li>
+        <% end %>
+      </ul>
+      <div id='page_part_editors'>
+        <% [:description].each do |part| %>
+          <div class='page_part' id='<%= part %>'>
+            <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :youtube_id -%>
+    <%= f.text_field :youtube_id  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :photo -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :photo_id,
+               :image => @recommendation.photo,
+               :toggle_image_display => false %>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :widget_visible -%>
+    <%= f.check_box :widget_visible, :checked => @recommendation[:widget_visible]  -%>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.recommendations.admin.recommendations.recommendation'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @recommendation.name) %>
+<% end -%>
+<% content_for :javascripts do %>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end %>

@@ -1,0 +1,36 @@
+nb:
+  refinery:
+    plugins:
+      recommendations:
+        title: Recommendations
+    recommendations:
+      admin:
+        recommendations:
+          actions:
+            create_new: Lag en ny Recommendation
+            reorder: Endre rekkefølgen på Recommendations
+            reorder_done: Ferdig å endre rekkefølgen Recommendations
+          records:
+            title: Recommendations
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Recommendations enda. Klikk på "Lag en ny Recommendation" for å legge til din første recommendation.
+          recommendation:
+            view_live_html: Vis hvordan denne recommendation ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne recommendation
+            delete: Fjern denne recommendation permanent
+      recommendations:
+        show:
+          other: Andre Recommendations
+  activerecord:
+    attributes:
+      'refinery/recommendations/recommendation':
+        name: Name
+        company: Company
+        company_url: Company Url
+        source_url: Source Url
+        publish_date: Publish Date
+        role: Role
+        description: Description
+        youtube_id: Youtube
+        photo: Photo
+        widget_visible: Widget Visible

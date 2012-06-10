@@ -1,0 +1,36 @@
+nl:
+  refinery:
+    plugins:
+      recommendations:
+        title: Recommendations
+    recommendations:
+      admin:
+        recommendations:
+          actions:
+            create_new: Maak een nieuwe Recommendation
+            reorder: Wijzig de volgorde van de Recommendations
+            reorder_done: Klaar met het wijzingen van de volgorde van de Recommendations
+          records:
+            title: Recommendations
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Recommendations. Druk op 'Maak een nieuwe Recommendation' om de eerste aan te maken.
+          recommendation:
+            view_live_html: Bekijk deze recommendation op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze recommendation
+            delete: Verwijder deze recommendation voor eeuwig
+      recommendations:
+        show:
+          other: Andere Recommendations
+  activerecord:
+    attributes:
+      'refinery/recommendations/recommendation':
+        name: Name
+        company: Company
+        company_url: Company Url
+        source_url: Source Url
+        publish_date: Publish Date
+        role: Role
+        description: Description
+        youtube_id: Youtube
+        photo: Photo
+        widget_visible: Widget Visible

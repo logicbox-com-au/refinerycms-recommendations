@@ -1,0 +1,2 @@
+<%= will_paginate @recommendations if Refinery::Recommendations::Admin::RecommendationsController.pageable? %>
+<%= render 'sortable_list' %>

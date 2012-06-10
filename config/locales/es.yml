@@ -1,0 +1,37 @@
+es:
+  refinery:
+    plugins:
+      recommendations:
+        title: Recommendations
+#        article: masculino/femenino
+    recommendations:
+      admin:
+        recommendations:
+          actions:
+            create_new: Crear nuevo recommendation
+            reorder: Reordenar recommendations
+            reorder_done: Reordenación de recommendations completada
+          records:
+            title: Recommendations
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay recommendations todavía. Pulsa en "Crear nuevo Recommendation" para crear tu primer recommendation.
+          recommendation:
+            view_live_html: Ver este recommendation como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este recommendation
+            delete: Borrar este recommendation para siempre
+      recommendations:
+        show:
+          other: Otros recommendations
+  activerecord:
+    attributes:
+      'refinery/recommendations/recommendation':
+        name: Name
+        company: Company
+        company_url: Company Url
+        source_url: Source Url
+        publish_date: Publish Date
+        role: Role
+        description: Description
+        youtube_id: Youtube
+        photo: Photo
+        widget_visible: Widget Visible

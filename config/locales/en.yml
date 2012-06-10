@@ -1,0 +1,36 @@
+en:
+  refinery:
+    plugins:
+      recommendations:
+        title: Recommendations
+    recommendations:
+      admin:
+        recommendations:
+          actions:
+            create_new: Add New Recommendation
+            reorder: Reorder Recommendations
+            reorder_done: Done Reordering Recommendations
+          records:
+            title: Recommendations
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Recommendations yet. Click "Add New Recommendation" to add your first recommendation.
+          recommendation:
+            view_live_html: View this recommendation live <br/><em>(opens in a new window)</em>
+            edit: Edit this recommendation
+            delete: Remove this recommendation forever
+      recommendations:
+        show:
+          other: Other Recommendations
+  activerecord:
+    attributes:
+      'refinery/recommendations/recommendation':
+        name: Name
+        company: Company
+        company_url: Company Url
+        source_url: Source Url
+        publish_date: Publish Date
+        role: Role
+        description: Description
+        youtube_id: Youtube
+        photo: Photo
+        widget_visible: Widget Visible
