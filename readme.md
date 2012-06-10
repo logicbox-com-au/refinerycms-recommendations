@@ -1,10 +1,10 @@
-# Recommendations extension for Refinery CMS.
+# Very Much - Work In Progress
 
-## How to build this extension as a gem
+First up just wanted to test the gem release.
+ 
+Please check back in a few days....
 
-    cd vendor/extensions/recommendations
-    gem build refinerycms-recommendations.gemspec
-    gem install refinerycms-recommendations.gem
-
-    # Sign up for a http://rubygems.org/ account and publish the gem
-    gem push refinerycms-recommendations.gem
+Hope to make this similair to Testimonials, but with:
+* Videos(youtube id) &/or Photo
+* Homepage widgets (with rotating display of selections in BE)
+* Operational for refinery 2.0

@@ -5,6 +5,8 @@ Gem::Specification.new do |s|
   s.name              = 'refinerycms-recommendations'
   s.authors           = ['Rich Larcombe', 'Ben Bruscella']
   s.version           = '0.0.0'
+  s.email             = 'rich@logicbox.com.au'
+  s.homepage          = 'https://github.com/thelogicbox/refinerycms-recommendations'
   s.description       = 'Ruby on Rails Recommendations extension for Refinery CMS'
   s.date              = '2012-06-10'
   s.summary           = 'Recommendations extension for Refinery CMS'
