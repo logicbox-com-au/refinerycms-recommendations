@@ -1,81 +1,51 @@
 <% content_for :body_content_title do %>
+  <% if @recommendation.photo.present? %>  
+        <%= image_fu @recommendation.photo, '150x' %>
+  <% end %>
+    
   <%= @recommendation.name %>
+
+  <% if @recommendation.role.present? %>
+      <small> (<%= @recommendation.role %>)</small>
+  <% end %>
+  <% if @recommendation.company.present? %>
+      <% if @recommendation.company_url.present? %>
+       <small><%= link_to @recommendation.company, @recommendation.company_url %></small>
+       <% else %>
+        <small>    <%=raw @recommendation.company %> </small>
+       <% end %>
+  <% end %>
 <% end %>
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Name</h1>
+
+<% content_for :body do %>
+  <article class="recommendation_item">
+      <small><%= l(@recommendation.publish_date, :format => :long) %></small>
+    <% if @recommendation.source_url.present? %>
+        <small><%= link_to "Orginal source link", @recommendation.source_url %></small>
+    <% end %>  
+    
+    <%= @recommendation.description.html_safe %>
+
     <p>
-      <%=raw @recommendation.name %>
+      <%= link_to t('.back_to_index'), refinery.recommendations_recommendation_path %>
     </p>
-  </section>
-  <section>
-    <h1>Role</h1>
-    <p>
-      <%=raw @recommendation.role %>
-    </p>
-  </section>
-  <section>
-    <h1>Company</h1>
-    <p>
-      <%=raw @recommendation.company %>
-    </p>
-  </section>
-  <section>
-    <h1>Company Url</h1>
-    <p>
-      <%=raw @recommendation.company_url %>
-    </p>
-  </section>
-  <section>
-    <h1>Source Url</h1>
-    <p>
-      <%=raw @recommendation.source_url %>
-    </p>
-  </section>
-  <section>
-    <h1>Publish Date</h1>
-    <p>
-      <%=raw @recommendation.publish_date %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @recommendation.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Youtube</h1>
-    <p>
-      <%=raw @recommendation.youtube_id %>
-    </p>
-  </section>
-  <section>
-    <h1>Photo</h1>
-    <p>
-      <%= image_fu @recommendation.photo, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Widget Visible</h1>
-    <p>
-      <%=raw @recommendation.widget_visible %>
-    </p>
-  </section>
+        
+    <%#=raw @recommendation.youtube_id %>
+
+</article>
 <% end %>
 
 <% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="recommendations">
-      <% @recommendations.each do |recommendation| %>
-        <li>
-          <%= link_to recommendation.name, refinery.recommendations_recommendation_path(recommendation) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
+
 <% end %>
 
+<%# content_for :side_body, render(:partial => 'latest') %>
+
 <%= render '/refinery/content_page' %>
+
+
+
+
+
+

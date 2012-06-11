@@ -1,7 +1,9 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(recommendation) -%>">
   <span class='title'>
     <%= recommendation.name %>
-
+    <span class="preview">
+          <%= l(recommendation.publish_date, :format => :short) %>
+      </span>
   </span>
   <span class='actions'>
     

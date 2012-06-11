@@ -1,0 +1,14 @@
+<aside>
+  <nav id="recent_recommendations">
+    <h2><%= t('.other') %></h2>
+    <ul id="recommendations">
+      <% @recommendations.each do |recommendation| %>
+        <li>
+          <%= link_to recommendation.name, refinery.recommendations_recommendation_path(recommendation) %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</aside>
+
+

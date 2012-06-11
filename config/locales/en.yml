@@ -21,6 +21,14 @@ en:
       recommendations:
         show:
           other: Other Recommendations
+          back_to_index: "Back to all recommendations"
+        latest:
+          other: Other Recommendations
+        index:
+            published: Published
+            read_more: Read more
+            no_items_yet: There are no news item entries yet.
+        
   activerecord:
     attributes:
       'refinery/recommendations/recommendation':
@@ -34,3 +42,7 @@ en:
         youtube_id: Youtube
         photo: Photo
         widget_visible: Widget Visible
+        
+     
+        
+        
