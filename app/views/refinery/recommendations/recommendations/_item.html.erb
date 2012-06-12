@@ -1,4 +1,14 @@
 <div class="recommendation">
+  <div class="left-media">
+    <% if recommendation.photo.present? %>  
+          <%= image_fu recommendation.photo, '120x150#' %>
+    <% end %>
+  </div>
+  <div class="right-media">
+    <% if recommendation.youtube_id.present? %>
+    <iframe width="240" height="140" src="http://www.youtube.com/embed/<%= recommendation.youtube_id%>" frameborder="0" allowfullscreen></iframe> 
+    <% end %>
+  </div>
   <blockquote>
     <p><%= raw recommendation.description %></p>
     <p><cite><%= raw citation_line(recommendation) %></cite></p>

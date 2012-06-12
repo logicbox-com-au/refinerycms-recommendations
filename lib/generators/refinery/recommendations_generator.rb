@@ -32,7 +32,7 @@ Refinery::Recommendations::Engine.load_seed
       end
       
       copy_file "recommendations.js", "app/assets/javascripts/recommendations.js"
-      copy_file "recommendations.css", "app/assets/stylesheets/recommendations.css"
+      copy_file "recommendations.css.scss", "app/assets/stylesheets/recommendations.css.scss"
       directory 'images', 'app/assets/images'
       directory 'helpers', 'app/helpers'
     end

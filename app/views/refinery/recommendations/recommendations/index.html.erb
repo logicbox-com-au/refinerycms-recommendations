@@ -1,9 +1,2 @@
-<% content_for :body_content_left do %>
-  <div class="recommendations">
-    <% @recommendations.each do |rec| %>
-         <%= render 'item', :recommendation => rec %>
-    <% end %>
-  </div>
-<% end %>
-
+<%= render 'items' %>
 <%= render '/refinery/content_page' %>

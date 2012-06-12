@@ -13,7 +13,7 @@ module Refinery
 
       def show
         @recommendation = Recommendation.find(params[:id])
-
+        @other_recommendations = Recommendation.find(:all, :conditions => ["slug != ?", params[:id]])
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @recommendation in the line below:
         present(@page)

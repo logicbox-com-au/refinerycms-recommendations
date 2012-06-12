@@ -1,19 +1,23 @@
-# Very Much - Work In Progress
+###Usage:
+The usual:
+* bundle install
+* rails generate refinery:recommendations
+* rake db:migrate db:seed
 
-First up just wanted to test the gem release.
- 
-Please check back in a few days....
-
-Hope to make this similair to Testimonials, but with:
-* Videos(youtube id) &/or Photo
-* Homepage widgets (with rotating display of selections in BE)
-* Operational for refinery 2.0
-
-Items already included.
+###Functionality:
+Hopefully similair to Testimonials refinery1.0 gem, but with:
+* Compatability with refinerycms 2.0
 * BE/admin: Ability to load new recommendations with photo, video and company links etc.
-* FE: Displays all recomendations data (except video) 
+* FE: Displays all recomendations data for all on both index page and individual shows (including friendly ids to maximise seo)
 
 Items todo.
-* Figure out how to include assets in the gem (images,css & js, yes help would be useful)
-* style up the default views and home page widget
-* figure out where to put the video and get it working.
+* Homepage widgets (with rotating display of selections made in BE)
+
+###Additional things you might like to do
+####Change the name from recommendations to say testimonials.
+* Easiest way, after installing the gem, copy across the components from config/locales/en.yml that you'd like to rename, i.e:
+en:
+  refinery:
+    plugins:
+      recommendations:
+        title: Testimonials
