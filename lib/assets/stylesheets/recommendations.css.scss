@@ -1,0 +1,38 @@
+.recommendations {
+  border-bottom:1px dashed #ddd; margin:20px 0;
+}
+
+.recommendation {
+  border-top:1px dashed #ddd;
+  min-height: 180px;
+  clear: both;
+  position: relative;
+  .main-quote{
+    overflow:hidden;
+  }
+  .left-media{
+    max-height:150px;
+    padding:10px;
+    float:left;
+  }  
+}
+
+.recommendation {border-top:1px dashed #ddd;}
+cite {
+  font-style:normal;
+  padding-left: 20px;
+}
+blockquote p {
+  padding: 0 10px 0 30px;
+}
+blockquote p:first-child {
+  background: transparent url(open_quote.gif) no-repeat 0 0;
+  padding-top:30px;
+  margin-left:10px;
+}
+blockquote {
+  background: transparent url(close_quote.gif) no-repeat scroll right bottom;
+  margin:0 0 0 14px;
+  padding: 0 25px 0 25px;
+  border:0px;
+}

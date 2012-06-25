@@ -4,6 +4,8 @@ The usual:
 * rails generate refinery:recommendations
 * rake db:migrate db:seed
 
+You might need to add the require recommendations to the appliction.css/scss 
+
 ###Functionality:
 Hopefully similair to Testimonials refinery1.0 gem, but with:
 * Compatability with refinerycms 2.0
