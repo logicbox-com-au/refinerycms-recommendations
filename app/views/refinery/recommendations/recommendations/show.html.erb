@@ -2,7 +2,7 @@
   <div class="recommendations">
     <%= render 'item', :recommendation => @recommendation %>
     <% @other_recommendations.each do |rec| %>
-         <%= render 'item', :recommendation => rec %>
+         <%= render 'item', :recommendation => rec unless (@recommendation.id == rec.id) %>
     <% end %>
   </div>
 <% end %>

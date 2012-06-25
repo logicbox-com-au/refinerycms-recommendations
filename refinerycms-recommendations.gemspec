@@ -4,11 +4,11 @@ Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = 'refinerycms-recommendations'
   s.authors           = ['Rich Larcombe', 'Ben Bruscella']
-  s.version           = '0.0.0'
+  s.version           = '0.0.2'
   s.email             = 'rich@logicbox.com.au'
   s.homepage          = 'https://github.com/thelogicbox/refinerycms-recommendations'
   s.description       = 'Ruby on Rails Recommendations extension for Refinery CMS'
-  s.date              = '2012-06-10'
+  s.date              = '2012-06-25'
   s.summary           = 'Recommendations extension for Refinery CMS'
   s.require_paths     = %w(lib)
   s.files             = Dir["{app,config,db,lib}/**/*"] + ["readme.md"]

@@ -20,7 +20,7 @@ Refinery::Recommendations::Engine.load_seed
     end
     
     def add_assets
-      insert_into_file "app/assets/javascripts/application.js", "//= require recommendations \n", :after => "jquery_ujs\n"
+      #insert_into_file "app/assets/javascripts/application.js", "//= require recommendations \n", :after => "jquery_ujs\n"
 
       # Add our own require:
       content = File.read("app/assets/stylesheets/application.css")
@@ -31,9 +31,9 @@ Refinery::Recommendations::Engine.load_seed
         insert_into_file "app/assets/stylesheets/application.css", style_require_block, :after => "require_self\n"
       end
       
-      copy_file "recommendations.js", "app/assets/javascripts/recommendations.js"
-      copy_file "recommendations.css.scss", "app/assets/stylesheets/recommendations.css.scss"
-      directory 'images', 'app/assets/images'
+      #copy_file "recommendations.js", "app/assets/javascripts/recommendations.js"
+      #copy_file "recommendations.css.scss", "app/assets/stylesheets/recommendations.css.scss"
+      #directory 'images', 'app/assets/images'
       directory 'helpers', 'app/helpers'
     end
   end

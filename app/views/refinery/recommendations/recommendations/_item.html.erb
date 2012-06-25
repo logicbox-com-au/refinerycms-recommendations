@@ -1,18 +1,20 @@
 <div class="recommendation">
   <div class="left-media">
-    <% if recommendation.photo.present? %>  
-          <%= image_fu recommendation.photo, '120x150#' %>
-    <% end %>
-  </div>
-  <div class="right-media">
     <% if recommendation.youtube_id.present? %>
-    <iframe width="240" height="140" src="http://www.youtube.com/embed/<%= recommendation.youtube_id%>" frameborder="0" allowfullscreen></iframe> 
+      <iframe width="240" height="140" src="http://www.youtube.com/embed/<%= recommendation.youtube_id%>" frameborder="0" allowfullscreen></iframe> 
+    <% elsif recommendation.photo.present? %>  
+      <%= image_fu recommendation.photo, '120x150#' %>
     <% end %>
   </div>
-  <blockquote>
-    <p><%= raw recommendation.description %></p>
-    <p><cite><%= raw citation_line(recommendation) %></cite></p>
-  </blockquote>
+  <div class="main-quote">       
+       <blockquote cite="http://stackoverflow.com">
+         <p><%= raw recommendation.description %></p>
+       </blockquote>
+       <p>
+         <cite><%= raw citation_line(recommendation) %></cite>
+       </p>
+  </div>
+
 </div>
 
 
