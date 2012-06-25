@@ -23,6 +23,7 @@ cite {
   padding-left: 20px;
 }
 blockquote p {
+  font-style: italic;
   padding: 0 10px 0 30px;
 }
 blockquote p:first-child {
@@ -32,7 +33,7 @@ blockquote p:first-child {
 }
 blockquote {
   background: transparent url(close_quote.gif) no-repeat scroll right bottom;
-  margin:0 0 0 14px;
-  padding: 0 25px 0 25px;
+  margin:0 0 0 0px;
+  padding: 0 5px 0 0px;
   border:0px;
 }
